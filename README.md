@@ -39,3 +39,7 @@ For detailed information about how to use these endpoints and the available quer
 ## Error Handling
 
 The API implements error handling to provide clear and informative error responses. Error messages will help you identify and resolve issues during API usage.
+
+GitHub : [Ahmed Sayed](https://github.com/unRealAhmed)
+
+Happy coding! 🚀
