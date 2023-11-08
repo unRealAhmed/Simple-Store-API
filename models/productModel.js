@@ -1,5 +1,6 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
+// Define the product schema
 const productSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -31,6 +32,7 @@ const productSchema = new mongoose.Schema({
   },
 });
 
-const Product = mongoose.model('Product', productSchema)
+// Create a model based on the product schema
+const Product = mongoose.model('Product', productSchema);
 
-module.exports = Product
+module.exports = Product;
