@@ -28,11 +28,11 @@ Before running the Store API, ensure you have the following prerequisites instal
 
 The Store API provides the following endpoints:
 
-- **GET /api/v1/products**: Retrieve a list of products.
-- **GET /api/v1/products/:id**: Retrieve details of a specific product.
-- **POST /api/v1/products**: Create a new product.
-- **PATCH /api/v1/products/:id**: Update a product by ID.
-- **DELETE /api/v1/products/:id**: Delete a product by ID.
+- `GET /api/v1/products` - Retrieve a list of products.
+- `POST /api/v1/products` - Retrieve details of a specific product.
+- `GET /api/v1/products/:id` - Create a new product.
+- `PATCH /api/v1/products/:id` - Update a product by ID.
+- `DELETE /api/v1/products/:id` - Delete a product by ID.
 
 For detailed information about how to use these endpoints and the available query parameters, refer to the API documentation.
 
