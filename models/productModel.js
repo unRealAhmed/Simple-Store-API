@@ -23,6 +23,7 @@ const productSchema = new mongoose.Schema({
   },
   company: {
     type: String,
+    required: [true, 'Please provide the product company.'],
     enum: {
       values: ['ikea', 'liddy', 'caressa', 'marcos'],
       message: 'Company name must be one of: ikea, liddy, caressa, marcos.',
