@@ -5,30 +5,22 @@ const connectDatabase = require('./utilities/dataBase');
 
 const productsData = JSON.parse(fs.readFileSync(`${__dirname}/products.js`, 'utf-8'))
 
-connectDatabase();
-
-const importData = async () => {
+const start = async () => {
   try {
-    await Product.create(productsData)
-    console.log(`Data Loaded Successfully👍`);
-  } catch (err) {
-    console.log(err);
-  }
-  process.exit()
-}
+    await connectDatabase(); // Connect to the database
 
-const deleteData = async () => {
-  try {
-    await Product.deleteMany()
-    console.log(`Data Deleted Succefully👍`);
-  } catch (err) {
-    console.log(err);
-  }
-  process.exit()
-}
+    // First, delete existing data
+    await Product.deleteMany();
 
-if (process.argv[2] === '--import') {
-  importData()
-} else if (process.argv[2] === '--delete') {
-  deleteData()
-}
+    // Then, create new data
+    await Product.create(productsData);
+
+    console.log('Data deleted and loaded successfully👍');
+  } catch (error) {
+    console.log(error);
+  }
+
+  process.exit();
+};
+
+start();
